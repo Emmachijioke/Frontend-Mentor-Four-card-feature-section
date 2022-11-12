@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --green: hsl(180, 62%, 55%);
+    --red:hsl(0, 78%, 62%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --body: hsl(0, 0%, 98%);
+    --text: hsl(229, 6%, 66%);
+    --heading: black;
+}
+
+@font-face{
+    font-family: poppins;
+    src: url(fonts/Poppins-Regular.ttf);
+}
+
+body{
+    font-family: poppins;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text);
+}
+
+.main{
+    max-width: 1440px;
+    margin: auto;
+    background-color: var(--body);
+    border: 4px gray solid;
+}
+
+header{
+    text-align: center;
+    width: 25rem;
+    margin: 3rem auto;
+}
+
+header p{
+    font-size: 12px;
+    font-weight: 200;
+}
+
+header .top{
+    font-size: 1.8rem;
+    color: var(--heading);
+    font-weight: 200;
+    opacity: 50%;
+}
+
+header .bottom{
+    color: black;
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+}
+
+.grid-container{
+    display: grid;
+    margin: auto;
+    width: 900px;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1.5rem;
+    grid-template-areas: 
+    ". team ."
+    "supervisor team calculator"
+    "supervisor karma calculator"
+    ". karma .";
+    margin-bottom: 2rem;
+}
+
+.supervisor{
+    background-color: white;
+    width: 17.5rem;
+    grid-area: supervisor;
+    margin: auto;
+    box-shadow: 0 5px 10px rgb(207, 201, 201);
+}
+
+.team{
+    background-color: white;
+    width: 17.5rem;
+    grid-area: team;
+    margin: auto;
+    box-shadow: 0 5px 10px rgb(207, 201, 201);
+}
+
+.karma{
+    background-color: white;
+    width: 17.5rem;
+    grid-area: karma;
+    margin: auto;
+    box-shadow: 0 5px 10px rgb(207, 201, 201);
+}
+
+.calculator{
+    background-color: white;
+    width: 17.5rem;
+    grid-area: calculator;
+    margin: auto;
+    box-shadow: 0 5px 10px rgb(207, 201, 201);
+}
+
+.line{
+    border: 1px var(--green) solid;
+}
+
+.line2{
+    border: 1px var(--red) solid;
+}
+.line3{
+    border: 1px var(--orange) solid;
+}
+.line4{
+    border: 1px var(--green) solid;
+}
+
+.image{
+    margin-left: 10.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+h4{
+    color: black;
+    font-weight: 600;
+}
+
+.card{
+    margin: 1.2rem;
+}
+
+.card p{
+    font-size: 10px;
+    color: var(--text);
+    font-weight: 200;
+}
+
+.card-text{
+    width: 12rem;
+}
+
+footer{
+    text-align: center;
+}
