@@ -30,13 +30,12 @@ body{
     max-width: 1440px;
     margin: auto;
     background-color: var(--body);
-    border: 4px gray solid;
 }
 
 header{
     text-align: center;
     width: 25rem;
-    margin: 3rem auto;
+    margin: auto;
 }
 
 header p{
@@ -49,6 +48,7 @@ header .top{
     color: var(--heading);
     font-weight: 200;
     opacity: 50%;
+    padding-top: 3rem;
 }
 
 header .bottom{
@@ -59,8 +59,8 @@ header .bottom{
 
 .grid-container{
     display: grid;
-    margin: auto;
-    width: 900px;
+    margin: 3rem auto;
+    max-width: 1000px;
     grid-template-columns: repeat(3 , 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 1.5rem;
@@ -74,7 +74,7 @@ header .bottom{
 
 .supervisor{
     background-color: white;
-    width: 17.5rem;
+    width: 19.5rem;
     grid-area: supervisor;
     margin: auto;
     box-shadow: 0 5px 10px rgb(207, 201, 201);
@@ -82,7 +82,7 @@ header .bottom{
 
 .team{
     background-color: white;
-    width: 17.5rem;
+    width: 19.5rem;
     grid-area: team;
     margin: auto;
     box-shadow: 0 5px 10px rgb(207, 201, 201);
@@ -90,7 +90,7 @@ header .bottom{
 
 .karma{
     background-color: white;
-    width: 17.5rem;
+    width: 19.5rem;
     grid-area: karma;
     margin: auto;
     box-shadow: 0 5px 10px rgb(207, 201, 201);
@@ -98,24 +98,24 @@ header .bottom{
 
 .calculator{
     background-color: white;
-    width: 17.5rem;
+    width: 19.5rem;
     grid-area: calculator;
     margin: auto;
     box-shadow: 0 5px 10px rgb(207, 201, 201);
 }
 
 .line{
-    border: 1px var(--green) solid;
+    border: 2px var(--green) solid;
 }
 
 .line2{
-    border: 1px var(--red) solid;
+    border: 2px var(--red) solid;
 }
 .line3{
-    border: 1px var(--orange) solid;
+    border: 2px var(--orange) solid;
 }
 .line4{
-    border: 1px var(--green) solid;
+    border: 2px var(--green) solid;
 }
 
 .image{
@@ -130,7 +130,7 @@ h4{
 }
 
 .card{
-    margin: 1.2rem;
+    margin: 1.5rem;
 }
 
 .card p{
@@ -145,4 +145,82 @@ h4{
 
 footer{
     text-align: center;
+}
+
+@media screen  and (max-width:768px){
+    .main{
+        width: 375px;
+        margin: auto;
+        background-color: white;
+    }
+
+    header{
+        width: 375px;
+        padding: 6rem 2rem;
+    }
+    header .top{
+        font-size: 1.5rem;
+        margin-top: -3.5rem;
+    }
+    header .bottom{
+        font-size: 1.6rem;
+    }
+
+    header p{
+        font-size: 15px;
+        opacity: 80%;
+        font-weight: 400;
+    }
+
+    .team{
+        margin-left: 1rem;
+    }
+    .supervisor{
+        margin-left: 1rem;
+    }
+    .karma{
+        margin-left: 1rem;
+    }
+    .calculator{
+        margin-left: 1rem;
+    }
+
+    .grid-container{
+        display: grid;
+        margin: auto;
+        width: 375px;
+        grid-template-columns: 1 , 1fr;
+        grid-template-rows: repeat(4 , 1fr);
+        gap: 1.5rem;
+        grid-template-areas: 
+        "supervisor"
+        "team"
+        "karma"
+        "calculator";
+        margin-bottom: 2rem;
+        align-content: center;
+        padding: 0 1rem;
+    }
+
+    .card p{
+       font-size: 13px;
+       opacity: 80%;
+       font-weight: 400;
+    }
+
+    .card h4{
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-top: 1rem;
+        opacity: 80%;
+    }
+    .card-text{
+        width: 16rem;
+    }
+
+    .image{
+        margin-left: 12rem;
+        margin-top: 2rem;
+    }
+  
 }
